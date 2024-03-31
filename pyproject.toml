@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "data-visualize"
+version = "0.1.0"
+description = ""
+authors = ["sinuli"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+selenium = "^4.19.0"
+folium = "^0.16.0"
+googlemaps = "^4.10.0"
+python-environ = "^0.4.54"
+openpyxl = "^3.1.2"
+pandas = "^2.2.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
