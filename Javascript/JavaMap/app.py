@@ -37,7 +37,7 @@ def get_coordinates(building_name):
 def search_hospitals(latitude, longitude, radius=None):
     # 카카오 맵 API 요청을 위한 URL과 API 키 설정
     kakao_api_url = "https://dapi.kakao.com/v2/local/search/category.json"
-    kakao_api_key = "c9729f11ed53ad49c639ec07d649d56c"  # 여기에 본인의 API 키를 입력하세요
+    kakao_api_key = "APIKEY"  # 여기에 본인의 API 키를 입력하세요
 
     # 요청 파라미터 설정
     params = {
