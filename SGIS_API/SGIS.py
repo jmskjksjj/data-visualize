@@ -5,8 +5,8 @@ def get_building_info(keyword):
     # SGIS API 엔드포인트 URL
     api_url = "https://sgisapi.kostat.go.kr/OpenAPI3/auth/authentication.json"
 
-    # API 키
-    api_key = "8f2108d175da4b86a0da"
+    # API 키ke
+    api_key = "APIKEY"
 
     # 주소를 URL 인코딩
     encoded_address = urllib.parse.quote(keyword)
