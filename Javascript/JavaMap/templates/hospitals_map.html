@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ce33a674207593eeb12f46b6502aa707 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_ce33a674207593eeb12f46b6502aa707" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ce33a674207593eeb12f46b6502aa707 = L.map(
+                "map_ce33a674207593eeb12f46b6502aa707",
+                {
+                    center: [37.577613288258206, 126.97689786832184],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_a7a5b867a1b04d3843eda6671a5d1ce7 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_a7a5b867a1b04d3843eda6671a5d1ce7.addTo(map_ce33a674207593eeb12f46b6502aa707);
+        
+    
+            var marker_c4755626ca3d552556128261e1d3c9df = L.marker(
+                [37.577613288258206, 126.97689786832184],
+                {}
+            ).addTo(map_ce33a674207593eeb12f46b6502aa707);
+        
+    
+        var popup_51bdb31ea682f34d98573256cc8df7be = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b48b08269a70b6906c620d0556b7bffb = $(`<div id="html_b48b08269a70b6906c620d0556b7bffb" style="width: 100.0%; height: 100.0%;">경복궁</div>`)[0];
+                popup_51bdb31ea682f34d98573256cc8df7be.setContent(html_b48b08269a70b6906c620d0556b7bffb);
+            
+        
+
+        marker_c4755626ca3d552556128261e1d3c9df.bindPopup(popup_51bdb31ea682f34d98573256cc8df7be)
+        ;
+
+        
+    
+    
+            var circle_marker_a3a663a80fb3c4007f8cd2024de72a96 = L.circleMarker(
+                [37.5748238680082, 126.97293324042],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "pink", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_ce33a674207593eeb12f46b6502aa707);
+        
+    
+        var popup_7a0ef940de674966ebd9707cb3b1aeab = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_85329d0795660adf4e39324e418d6c28 = $(`<div id="html_85329d0795660adf4e39324e418d6c28" style="width: 100.0%; height: 100.0%;">도반한방병원</div>`)[0];
+                popup_7a0ef940de674966ebd9707cb3b1aeab.setContent(html_85329d0795660adf4e39324e418d6c28);
+            
+        
+
+        circle_marker_a3a663a80fb3c4007f8cd2024de72a96.bindPopup(popup_7a0ef940de674966ebd9707cb3b1aeab)
+        ;
+
+        
+    
+    
+            var circle_marker_2eef1e80c6112bec8556b506eb729ed8 = L.circleMarker(
+                [37.57086897670683, 126.9798170302968],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "pink", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_ce33a674207593eeb12f46b6502aa707);
+        
+    
+        var popup_25534b62ac95fb1f4e182f4dbe51a1e2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6a8ff99f46ebbae18d8fb8de71b01d21 = $(`<div id="html_6a8ff99f46ebbae18d8fb8de71b01d21" style="width: 100.0%; height: 100.0%;">공안과의원 종로점</div>`)[0];
+                popup_25534b62ac95fb1f4e182f4dbe51a1e2.setContent(html_6a8ff99f46ebbae18d8fb8de71b01d21);
+            
+        
+
+        circle_marker_2eef1e80c6112bec8556b506eb729ed8.bindPopup(popup_25534b62ac95fb1f4e182f4dbe51a1e2)
+        ;
+
+        
+    
+    
+            var circle_marker_bf19d640196557768a96e9773d72c36c = L.circleMarker(
+                [37.57227359146669, 126.97099167178334],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "pink", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_ce33a674207593eeb12f46b6502aa707);
+        
+    
+        var popup_5cc5320d0f3cc6ba609eb46633c335ca = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_19c1f592d9377662f87215c110e65207 = $(`<div id="html_19c1f592d9377662f87215c110e65207" style="width: 100.0%; height: 100.0%;">아미나 요양병원</div>`)[0];
+                popup_5cc5320d0f3cc6ba609eb46633c335ca.setContent(html_19c1f592d9377662f87215c110e65207);
+            
+        
+
+        circle_marker_bf19d640196557768a96e9773d72c36c.bindPopup(popup_5cc5320d0f3cc6ba609eb46633c335ca)
+        ;
+
+        
+    
+    
+            var circle_marker_d3bf4e6e5ae75e231439bbb0e3728cd0 = L.circleMarker(
+                [37.568509338947926, 126.96791880666925],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "pink", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_ce33a674207593eeb12f46b6502aa707);
+        
+    
+        var popup_05fd48f72cbc58be0e6bf6ff3cbf9d26 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bf34a8093964c75dcef4097a8ae91892 = $(`<div id="html_bf34a8093964c75dcef4097a8ae91892" style="width: 100.0%; height: 100.0%;">강북삼성병원</div>`)[0];
+                popup_05fd48f72cbc58be0e6bf6ff3cbf9d26.setContent(html_bf34a8093964c75dcef4097a8ae91892);
+            
+        
+
+        circle_marker_d3bf4e6e5ae75e231439bbb0e3728cd0.bindPopup(popup_05fd48f72cbc58be0e6bf6ff3cbf9d26)
+        ;
+
+        
+    
+    
+            var circle_marker_08e203598bd74c4edea980ab17e51a17 = L.circleMarker(
+                [37.5725602553089, 126.980475393512],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "pink", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_ce33a674207593eeb12f46b6502aa707);
+        
+    
+        var popup_fc48b144b14bebb372513b2acb244abc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e216aa5abd01a7b43aacf3d71fcb2922 = $(`<div id="html_e216aa5abd01a7b43aacf3d71fcb2922" style="width: 100.0%; height: 100.0%;">연세로의료의원</div>`)[0];
+                popup_fc48b144b14bebb372513b2acb244abc.setContent(html_e216aa5abd01a7b43aacf3d71fcb2922);
+            
+        
+
+        circle_marker_08e203598bd74c4edea980ab17e51a17.bindPopup(popup_fc48b144b14bebb372513b2acb244abc)
+        ;
+
+        
+    
+    
+            var circle_marker_733bae324a6eee6ee3f6eb32774cbc94 = L.circleMarker(
+                [37.57103216538637, 126.98046220879066],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "pink", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_ce33a674207593eeb12f46b6502aa707);
+        
+    
+        var popup_a77e25cf36245ec05c222ea6e9517bac = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8b40169d383438536202c290abd394f1 = $(`<div id="html_8b40169d383438536202c290abd394f1" style="width: 100.0%; height: 100.0%;">연세마이덴치과의원</div>`)[0];
+                popup_a77e25cf36245ec05c222ea6e9517bac.setContent(html_8b40169d383438536202c290abd394f1);
+            
+        
+
+        circle_marker_733bae324a6eee6ee3f6eb32774cbc94.bindPopup(popup_a77e25cf36245ec05c222ea6e9517bac)
+        ;
+
+        
+    
+    
+            var circle_marker_af9ad0c8f8239e2f15f0629eee186367 = L.circleMarker(
+                [37.57183264517333, 126.97328523722531],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "pink", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_ce33a674207593eeb12f46b6502aa707);
+        
+    
+        var popup_ee7436d36db8207c80abd845e05a1060 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_32d7dfc9bc5c2928bde8248193514ff6 = $(`<div id="html_32d7dfc9bc5c2928bde8248193514ff6" style="width: 100.0%; height: 100.0%;">광화문정형외과의원</div>`)[0];
+                popup_ee7436d36db8207c80abd845e05a1060.setContent(html_32d7dfc9bc5c2928bde8248193514ff6);
+            
+        
+
+        circle_marker_af9ad0c8f8239e2f15f0629eee186367.bindPopup(popup_ee7436d36db8207c80abd845e05a1060)
+        ;
+
+        
+    
+    
+            var circle_marker_e1ffd3225931a630e2254181fb30a3ab = L.circleMarker(
+                [37.581253855387715, 126.97120895207867],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "pink", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_ce33a674207593eeb12f46b6502aa707);
+        
+    
+        var popup_386a2ad81071d1090a6c4fc64a30698c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8819bb7a965f521c2fdf3699f86930da = $(`<div id="html_8819bb7a965f521c2fdf3699f86930da" style="width: 100.0%; height: 100.0%;">곽내과의원</div>`)[0];
+                popup_386a2ad81071d1090a6c4fc64a30698c.setContent(html_8819bb7a965f521c2fdf3699f86930da);
+            
+        
+
+        circle_marker_e1ffd3225931a630e2254181fb30a3ab.bindPopup(popup_386a2ad81071d1090a6c4fc64a30698c)
+        ;
+
+        
+    
+    
+            var circle_marker_aa7567338ca34c1f180aac682fa0eca2 = L.circleMarker(
+                [37.5706097467219, 126.976346501831],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "pink", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_ce33a674207593eeb12f46b6502aa707);
+        
+    
+        var popup_b077f6046a307e448987ac7c87e615f8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5d2727add6c17512c47bfc86852f07d9 = $(`<div id="html_5d2727add6c17512c47bfc86852f07d9" style="width: 100.0%; height: 100.0%;">광화문닥터김이비인후과의원</div>`)[0];
+                popup_b077f6046a307e448987ac7c87e615f8.setContent(html_5d2727add6c17512c47bfc86852f07d9);
+            
+        
+
+        circle_marker_aa7567338ca34c1f180aac682fa0eca2.bindPopup(popup_b077f6046a307e448987ac7c87e615f8)
+        ;
+
+        
+    
+    
+            var circle_marker_6ae602e84186cab1b5c767c673021ae1 = L.circleMarker(
+                [37.5763717614201, 126.972867021249],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "pink", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_ce33a674207593eeb12f46b6502aa707);
+        
+    
+        var popup_eb437c3abe9238044e5194702371dd23 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cfc1f6d9d36be59e1a96aa0ca657da3e = $(`<div id="html_cfc1f6d9d36be59e1a96aa0ca657da3e" style="width: 100.0%; height: 100.0%;">광화문하나이비인후과의원</div>`)[0];
+                popup_eb437c3abe9238044e5194702371dd23.setContent(html_cfc1f6d9d36be59e1a96aa0ca657da3e);
+            
+        
+
+        circle_marker_6ae602e84186cab1b5c767c673021ae1.bindPopup(popup_eb437c3abe9238044e5194702371dd23)
+        ;
+
+        
+    
+    
+            var circle_marker_9ec35c401a2d044012b78fccaf89990a = L.circleMarker(
+                [37.57632080411947, 126.97076595607895],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "pink", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_ce33a674207593eeb12f46b6502aa707);
+        
+    
+        var popup_58c3225d91957d778cf0700e72c081c9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2ab0178b9d3a647c3033a3b86ffb6a2e = $(`<div id="html_2ab0178b9d3a647c3033a3b86ffb6a2e" style="width: 100.0%; height: 100.0%;">한빛내과의원</div>`)[0];
+                popup_58c3225d91957d778cf0700e72c081c9.setContent(html_2ab0178b9d3a647c3033a3b86ffb6a2e);
+            
+        
+
+        circle_marker_9ec35c401a2d044012b78fccaf89990a.bindPopup(popup_58c3225d91957d778cf0700e72c081c9)
+        ;
+
+        
+    
+    
+            var circle_marker_f2b9ae46791119d022d32604b74a7775 = L.circleMarker(
+                [37.5803783780964, 126.968799025283],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "pink", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_ce33a674207593eeb12f46b6502aa707);
+        
+    
+        var popup_85a6c994dea6a1a7fe335cafbc4869cb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0b750a802c0d16513c5d7723572a7653 = $(`<div id="html_0b750a802c0d16513c5d7723572a7653" style="width: 100.0%; height: 100.0%;">연세우리소아과의원</div>`)[0];
+                popup_85a6c994dea6a1a7fe335cafbc4869cb.setContent(html_0b750a802c0d16513c5d7723572a7653);
+            
+        
+
+        circle_marker_f2b9ae46791119d022d32604b74a7775.bindPopup(popup_85a6c994dea6a1a7fe335cafbc4869cb)
+        ;
+
+        
+    
+    
+            var circle_marker_78ac3f6544b91911958ad3b6997b4163 = L.circleMarker(
+                [37.570602540574, 126.976355559813],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "pink", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_ce33a674207593eeb12f46b6502aa707);
+        
+    
+        var popup_6a82f38a281b15eafe35a78905b445a9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a39f16d1d7c0e1266c573d67b53df936 = $(`<div id="html_a39f16d1d7c0e1266c573d67b53df936" style="width: 100.0%; height: 100.0%;">더클리어의원</div>`)[0];
+                popup_6a82f38a281b15eafe35a78905b445a9.setContent(html_a39f16d1d7c0e1266c573d67b53df936);
+            
+        
+
+        circle_marker_78ac3f6544b91911958ad3b6997b4163.bindPopup(popup_6a82f38a281b15eafe35a78905b445a9)
+        ;
+
+        
+    
+    
+            var circle_marker_ac620a6c824c104970580c396a0ed92d = L.circleMarker(
+                [37.5709601007214, 126.980552785077],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "pink", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_ce33a674207593eeb12f46b6502aa707);
+        
+    
+        var popup_f67ffcd49497017e4dbbaf4f88df4f42 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4ef90e8e2428afbcd6f2bd9c057352bd = $(`<div id="html_4ef90e8e2428afbcd6f2bd9c057352bd" style="width: 100.0%; height: 100.0%;">종로기대찬신경외과의원 본관</div>`)[0];
+                popup_f67ffcd49497017e4dbbaf4f88df4f42.setContent(html_4ef90e8e2428afbcd6f2bd9c057352bd);
+            
+        
+
+        circle_marker_ac620a6c824c104970580c396a0ed92d.bindPopup(popup_f67ffcd49497017e4dbbaf4f88df4f42)
+        ;
+
+        
+    
+    
+            var circle_marker_d0e4ce4b62b80e50d59fd8114f8436df = L.circleMarker(
+                [37.57078430052762, 126.97991893005045],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "pink", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_ce33a674207593eeb12f46b6502aa707);
+        
+    
+        var popup_c524b01a48ca8d724fabd9619997f65c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dfa40332cb17ee9d73bb200b5b5cdb3d = $(`<div id="html_dfa40332cb17ee9d73bb200b5b5cdb3d" style="width: 100.0%; height: 100.0%;">라미에르의원</div>`)[0];
+                popup_c524b01a48ca8d724fabd9619997f65c.setContent(html_dfa40332cb17ee9d73bb200b5b5cdb3d);
+            
+        
+
+        circle_marker_d0e4ce4b62b80e50d59fd8114f8436df.bindPopup(popup_c524b01a48ca8d724fabd9619997f65c)
+        ;
+
+        
+    
+</script>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>궁궐 지도</title>
+</head>
+<body>
+  <!-- 지도를 표시할 div -->
+  <div id="map" style="width:100%;height:100vh;"></div>
+
+  <!-- 카카오 맵 API 스크립트 -->
+  <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=39dd200de2ab11c3ffc55decf3bd583f&libraries=clusterer"></script>
+  <script>
+    // 지도를 표시할 div 요소를 가져옵니다.
+    var mapContainer = document.getElementById('map');
+    // 지도 옵션 설정
+    var mapOption = {
+      center: new kakao.maps.LatLng(37.56622, 126.97783), // 서울 시청 좌표
+      level: 10, // 지도의 확대 레벨
+      mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도 종류
+    }; 
+
+    // 지도 객체 생성
+    var map = new kakao.maps.Map(mapContainer, mapOption);
+
+    // 스타일 정의
+    var mapStyles = [
+      {
+        featureType: 'all',
+        elementType: 'all',
+        stylers: [
+          { saturation: -100 } // 채도를 -100으로 설정하여 흑백으로 변환
+        ]
+      }
+    ];
+
+    // 스타일을 적용할 지도 타입 생성
+    var styledMapType = new kakao.maps.StyledMapType(mapStyles);
+
+    // 지도에 스타일을 추가
+    map.mapTypes.set('customMapStyle', styledMapType);
+    map.setMapTypeId('customMapStyle');
+
+    // 마커 클러스터러를 생성합니다 
+    var clusterer = new kakao.maps.MarkerClusterer({
+      map: map, // 마커들을 클러스터로 관리하고 표시할 지도 객체 
+      averageCenter: true, // 클러스터에 포함된 마커들의 평균 위치를 클러스터 마커 위치로 설정 
+      minLevel: 10 // 클러스터 할 최소 지도 레벨 
+    });
+
+    // 키워드와 해당 궁의 좌표 및 내용을 정의합니다.
+    var places = [
+      { keyword: '경복궁', latlng: new kakao.maps.LatLng(37.5797700, 126.9770088), content: '눈오는 경복궁.' },
+      { keyword: '창덕궁', latlng: new kakao.maps.LatLng(37.5794836, 126.9910528), content: '창덕궁 후원' },
+      { keyword: '덕수궁', latlng: new kakao.maps.LatLng(37.5660431, 126.9752174), content: '덕수궁 석조전' }
+    ];
+
+    // 마커와 인포윈도우를 생성하고 클러스터러에 추가합니다.
+    places.forEach(function(place) {
+      var markerImage = new kakao.maps.MarkerImage(
+        'https://cdn.pixabay.com/photo/2018/06/02/05/17/south-korea-3447826_1280.png',
+        new kakao.maps.Size(30, 30),
+        { // 이미지를 마커의 중앙 아래로 설정합니다.
+          offset: new kakao.maps.Point(15, 30)
+        }
+      );
+
+      var marker = new kakao.maps.Marker({
+        position: place.latlng,
+        map: map,
+        image: markerImage // 마커에 이미지 적용
+      });
+
+      var infowindow = new kakao.maps.InfoWindow({
+        content: '<div style="padding:5px;">' + place.content + '</div>'
+      });
+
+      kakao.maps.event.addListener(marker, 'mouseover', function() {
+        infowindow.open(map, marker);
+      });
+
+      kakao.maps.event.addListener(marker, 'mouseout', function() {
+        infowindow.close();
+      });
+
+      clusterer.addMarker(marker);
+    });
+
+    // 마커들을 잇는 선을 그립니다.
+    var linePath = places.map(function(place) {
+      return place.latlng;
+    });
+
+    var polyline = new kakao.maps.Polyline({
+      path: linePath,
+      strokeWeight: 3,
+      strokeColor: '#FF0000',
+      strokeOpacity: 0.8,
+      strokeStyle: 'solid'
+    });
+
+    polyline.setMap(map);
+
+  </script>
+</body>
+</html>

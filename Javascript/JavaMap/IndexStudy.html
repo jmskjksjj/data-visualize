@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>다음 지도 API</title>
+</head>
+<body>
+  <!-- 지도를 표시할 div -->
+  <div id="map" style="width:100%;height:100vh;"></div>
+
+  <!-- 카카오 맵 API 스크립트 -->
+  <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=39dd200de2ab11c3ffc55decf3bd583f"></script>
+  <script>
+    // 지도를 표시할 div 요소를 가져옵니다.
+    var mapContainer = document.getElementById('map');
+    // 지도 옵션 설정
+    var mapOption = {
+      center: new kakao.maps.LatLng(37.56622, 126.97783), // 지도의 중심좌표
+      level: 1, // 지도의 확대 레벨
+      mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도 종류
+    }; 
+
+    // 지도 객체 생성
+    var map = new kakao.maps.Map(mapContainer, mapOption);
+
+    // 실시간 교통 타일 이미지 추가
+    map.addOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
+
+    // 마커 객체 생성 및 표시
+    var marker = new kakao.maps.Marker({
+      position: new kakao.maps.LatLng(37.5795926, 126.9910468), // 마커의 좌표
+      map: map // 마커를 표시할 지도 객체
+    });
+
+    // 인포윈도우 내용
+    var iwContent = '<div style="padding:5px;">창덕궁 후원에 가고싶다 <br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank">큰지도보기</a> <a href="https://map.kakao.com/link/to/Hello World!,33.450701,126.570667" style="color:blue" target="_blank">길찾기</a></div>';
+
+    // 인포윈도우 생성
+    var infowindow = new kakao.maps.InfoWindow({
+      content : iwContent
+    });
+
+    // 마커 위에 인포윈도우 표시
+    infowindow.open(map, marker);
+    // 마커2 객체 생성 및 표시
+    var marker2 = new kakao.maps.Marker({
+        position: new kakao.maps.LatLng(37.5801967, 126.9769331), // 마커의 좌표
+        map: map // 마커를 표시할 지도 객체
+        });
+
+        // 인포윈도우2 내용
+        var iwContent2 = '<div style="padding:5px;">경복궁에 가고싶다 <br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank">큰지도보기</a> <a href="https://map.kakao.com/link/to/Hello World!,33.450701,126.570667" style="color:blue" target="_blank">길찾기</a></div>';
+
+        // 인포윈도우 생성
+        var infowindow2 = new kakao.maps.InfoWindow({
+        content : iwContent2
+        });
+
+        // 마커 위에 인포윈도우2 표시
+        infowindow.open(map, marker2);
+    // 원 객체 생성
+    var circle = new kakao.maps.Circle({
+      map: map, // 원을 표시할 지도 객체
+      center : new kakao.maps.LatLng(37.5795926, 126.9910468), // 원의 중심 좌표
+      radius : 12.5, // 원의 반지름 (단위 : m)
+      fillColor: '#ffbcf6', // 채움 색
+      fillOpacity: 0.5, // 채움 불투명도
+      strokeWeight: 3, // 선의 두께
+      strokeColor: '#fe62e6', // 선 색
+      strokeOpacity: 0.9, // 선 투명도 
+      strokeStyle: 'solid' // 선 스타일
+    }); 
+
+  </script>
+</body>
+</html>

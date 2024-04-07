@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>병원 찾기</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <style>
+    #map { height: 400px; }
+  </style>
+</head>
+<body>
+  <h1>병원 찾기</h1>
+  <form method="post" action="/">
+    <label for="building_name">건물 이름:</label>
+    <input type="text" id="building_name" name="building_name">
+    <button type="submit">검색</button>
+  </form>
+  {% if map_exists %}
+    <div id="map"></div>
+    <script>
+      var map = L.map('map').setView([37.5665, 126.9780], 13); // 서울 시청 좌표
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+      }).addTo(map);
+      L.marker([37.123, 126.567]).addTo(map).bindPopup('Your building').openPopup();
+      L.circleMarker([37.456, 126.789], {radius: 10, color: 'red', fillOpacity: 0.7}).addTo(map).bindPopup('Hospital A');
+      L.circleMarker([37.789, 126.123], {radius: 10, color: 'red', fillOpacity: 0.7}).addTo(map).bindPopup('Hospital B');
+    </script>
+  {% endif %}
+  {% if error_message %}
+    <p>{{ error_message }}</p>
+  {% endif %}
+</body>
+</html>
